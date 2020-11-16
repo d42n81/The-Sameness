@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>The Sameness</title>
+
+        <!-- Include links to CSS stylesheets below -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <!-- import a p5 canvas here. -->
+            <div class="centered">
+                <h1>The Sameness - A Visual Narrative by David Moore</h1>
+                <a onclick="start()" id="startButton" class="button4" style="background-color:#4ef18f">Click Me To Start The Narrative!</a>    
+            </div>
+        </main>
+        <h2>What is this?</h2>
+        <p>This is a digital visual narrative created by David Moore, a senior computer science student at the University of North Carolina at Chapel Hill. The unique art direction is inspired by Scott McCloud's explanation of the "expressive potential" of lines in his work, <i>Understanding Comics: The Invisible Art.</i> The narrative is computed through Javascript code that takes SVG paths as input, and then converts the data to a set of functions through a fourier transform. Each function consists of 425 cosine functions. The summation of these functions results in a graphable fourier series. I then graphed this series using the p5.js library and synced music and my voice with the narrative. I hope that by allowing the lines to come to life this piece includes the audience in the creative process. In this way, the audience is the one running the program and is thus the one who drew the artwork they are viewing. Furthermore, I hope that the kinetic energy of the lines allows them to be as expressive as McCloud described and creates a very dynamic piece. Finally, even though this art is created purely through math and computed by a souless machine, I belive that the lines still convey human emotion and hopefully prompt an emotional response. The narrative conveys humanity because there is a wizard behind the curtain of this program who lovingly crafted this piece. I hope you enjoy my narrative! </p>
+        <h2>Acknowledgements</h2>
+        <p>All credit for the music goes to Seycara's orchestral remixes of Snail's House's <a href="https://www.youtube.com/watch?v=mYas4yGadq8">Journey</a> and <a href = "https://www.youtube.com/watch?v=fahiRzXry2U">Lullaby</a> . Thank you to those who have previously programmed fourier series from SVG data, it was very helpful for me to reference <a href="https://github.com/isaacvr/coding">IsaacVr</a> <a href="https://github.com/ImparaAI/go-figure-api/blob/master/app/drawing/processing/draw_vector/series_builder.go#L10">ImparaAI</a> and <a href="https://www.tomesoftware.com/labs/using-fourier-series-draw-svg-images/">Phil Danne</a>.</p>
+        <h2>Contact</h2>
+        <p>I'd love to hear your thoughts on my work. Please send comments to <a href="mailto:dmoore42n81@gmail.com"> dmoore42n81@gmail.com</a> and please consider starring my <a href="https://github.com/d42n81">source code</a> and following me on <a href="https://github.com/d42n81">Github</a></p>
+        <audio id="audio" src="currentFourier.mp3"></audio>
+        <!-- Include links to Javascript files here -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+        <script type="text/javascript" src="../complex.min.js"></script>
+        <script type="text/javascript" src="../matrix.js"></script>
+        <script type="text/javascript" src="../utils.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
